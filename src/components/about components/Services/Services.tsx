@@ -3,7 +3,7 @@ import Stack from "../../base components/LayoutComponents/Stack/Stack";
 import Box from "../../base components/Primatives/Box/Box";
 import Paragraph from "../../base components/TypographyComponents/Paragraph/Paragraph";
 import Grid from "../../base components/LayoutComponents/Grid/Grid";
-import HyperText from "./HyperText";
+import HyperText from "../../hyper text/HyperText";
 
 const Service: React.FC = () => {
   const [hoveredBox, setHoveredBox] = useState<number | null>(null);

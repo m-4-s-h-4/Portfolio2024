@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, Variants } from "framer-motion";
-import Heading from "../../base components/TypographyComponents/Heading/Heading";
+import Heading from "../base components/TypographyComponents/Heading/Heading";
 
 interface HyperTextProps {
   text: string;

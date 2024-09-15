@@ -37,7 +37,7 @@ const renderers = {
     TextLayoutProps,
     "headingText" | "paragraphText" | "alignItems" | "textTransform"
   >) => (
-    <Grid variant="variant4" style={{ alignItems }}>
+    <Grid variant="Equal3" style={{ alignItems }}>
       <Heading level="h2" color="dark">
         {headingText}
       </Heading>
@@ -52,7 +52,7 @@ const renderers = {
     alignItems = "flex-start",
     textTransform = "none",
   }: Pick<TextLayoutProps, "paragraphs" | "alignItems" | "textTransform">) => (
-    <Grid variant="variant2" style={{ alignItems }}>
+    <Grid variant="ColumnSL" style={{ alignItems }}>
       {paragraphs?.map((text, index) => (
         <Paragraph
           key={index}
@@ -75,7 +75,7 @@ const renderers = {
     TextLayoutProps,
     "headings" | "paragraphs" | "alignItems" | "textTransform"
   >) => (
-    <Grid variant="variant2" style={{ alignItems }}>
+    <Grid variant="Equal2" style={{ alignItems }}>
       {paragraphs?.map((text, index) => (
         <Stack key={index} direction="vertical" gap="SpacingSpacing2">
           <Heading level="h2" color="dark">

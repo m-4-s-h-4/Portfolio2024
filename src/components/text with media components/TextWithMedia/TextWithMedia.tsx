@@ -37,7 +37,7 @@ const renderers = {
     TextWithMediaProps,
     "headingText" | "paragraphText" | "imageUrl"
   >) => (
-    <Grid variant="variant4">
+    <Grid variant="ColumnSL">
       <Stack direction="vertical" gap="SpacingSpacing2">
         <Heading level="h2" color="dark">
           {headingText}
@@ -58,7 +58,7 @@ const renderers = {
     TextWithMediaProps,
     "headingText" | "paragraphText" | "imageUrl"
   >) => (
-    <Grid variant="variant5">
+    <Grid variant="Equal3">
       <Stack direction="vertical" gap="SpacingSpacing2">
         <Heading level="h2" color="dark">
           {headingText}
