@@ -1,0 +1,75 @@
+/**
+ * Do not edit directly
+ * Generated on Sat, 14 Sep 2024 20:37:57 GMT
+ */
+
+
+
+:root {
+  --tokens-color-primary-black-100: #080808;
+  --tokens-color-primary-white-100: #F2F0F0;
+  --tokens-color-primary-white-200: #DFDFDF;
+  --background-color-dark: var(--tokens-color-primary-black-100);
+  --background-color-light: var(--tokens-color-primary-white-100);
+  --text-color-dark: var(--tokens-color-primary-black-100);
+  --text-color-light: var(--tokens-color-primary-white-100);
+  --background-color-project-hoover: var(--tokens-color-primary-white-200);
+  --spacing-spacing-0: 0rem;
+  --spacing-spacing-1: 0.625rem;
+  --spacing-spacing-2: 1.25rem;
+  --spacing-spacing-3: 1.875rem;
+  --spacing-spacing-4: 2.5rem;
+  --spacing-spacing-5: 3.125rem;
+  --spacing-spacing-6: 3.75rem;
+  --spacing-spacing-7: 4.375rem;
+  --spacing-spacing-8: 5rem;
+  --spacing-spacing-9: 5.625rem;
+  --spacing-spacing-10: 6.25rem;
+  --spacing-spacing-20: 12.25rem;
+  --display-heading-main-font-family: Call Of Ops Duty;
+  --display-heading-main-font-weight: 500;
+  --display-heading-main-line-height: 90%;
+  --display-heading-main-font-size: 18vw;
+  --display-heading-main-letter-spacing: 0;
+  --display-heading-main-text-decoration: none;
+  --display-heading-main-text-case: uppercase;
+  --h1-heading-main-font-family: I Am Awake;
+  --h1-heading-main-font-weight: 500;
+  --h1-heading-main-line-height: 125%;
+  --h1-heading-main-font-size: 8vw;
+  --h1-heading-main-letter-spacing: 0;
+  --h1-heading-main-text-decoration: none;
+  --h1-heading-main-text-case: uppercase;
+  --h2-heading-main-font-family: I Am Awake;
+  --h2-heading-main-font-weight: 400;
+  --h2-heading-main-line-height: 95%;
+  --h2-heading-main-font-size: 4vw;
+  --h2-heading-main-letter-spacing: 0;
+  --h2-heading-main-text-decoration: none;
+  --h2-heading-main-text-case: uppercase;
+  --h3-heading-main-font-family: I Am Awake;
+  --h3-heading-main-font-weight: 400;
+  --h3-heading-main-line-height: 125%;
+  --h3-heading-main-font-size: 3vw;
+  --h3-heading-main-letter-spacing: 0;
+  --h3-heading-main-text-decoration: none;
+  --h3-heading-main-text-case: uppercase;
+  --h4-heading-main-font-family: I Am Awake;
+  --h4-heading-main-font-weight: 400;
+  --h4-heading-main-line-height: 170%;
+  --h4-heading-main-font-size: 2vw;
+  --h4-heading-main-letter-spacing: 0;
+  --h4-heading-main-text-decoration: none;
+  --h4-heading-main-text-case: uppercase;
+  --body-font-family: Sepiaridom;
+  --body-line-height: 107%;
+  --body-font-weight: 400;
+  --body-font-size: 1.1vw;
+  --body-letter-spacing: 0;
+  --body-text-case: uppercase;
+  --note-font-family: Sepiaridom;
+  --note-font-weight: 400;
+  --note-font-size: 1.2vw;
+  --note-letter-spacing: 0;
+  --note-text-case: uppercase;
+}
