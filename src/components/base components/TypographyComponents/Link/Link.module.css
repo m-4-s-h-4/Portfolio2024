@@ -1,24 +1,17 @@
 .link {
   position: relative;
-  color: inherit;
-  text-decoration: none;
   display: inline-block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .underline {
+  display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
-  width: 100%;
   height: 1px;
-  background-color: inherit;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease-in;
-}
-
-.link:hover .underline,
-.link:focus .underline,
-.link.active .underline {
-  transform: scaleX(1);
+  background-color: currentColor;
+  width: 0;
+  transition: width 0.3s ease-in-out;
 }

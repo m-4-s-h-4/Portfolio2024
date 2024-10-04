@@ -1,12 +1,13 @@
 import React from "react";
 import Container from "../../components/base components/Container/Container";
-import WorkGrid from "../../components/work components/WorkGrid/WorkGrid";
+
+import WorkDisplay from "../../components/work components/WorkDisplay/WorkDisplay";
 
 const Work: React.FC = () => {
   return (
     <>
-      <Container>
-        <WorkGrid />
+      <Container height="100vh">
+        <WorkDisplay />
       </Container>
     </>
   );

@@ -3,79 +3,69 @@ import styled from "styled-components";
 import { spacingMap } from "../../../../utils/spacingMap";
 import Box from "../../Primatives/Box/Box";
 
+// Define interface for Grid component props
 export interface GridProps {
-  variant?: "Equal3" | "ColumnSL" | "Equal2" | "WorkDisplay";
+  variant?: "Default" | "ColumnSL" | "Equal2"; // Variant prop to control grid configuration
   style?: React.CSSProperties;
   children: React.ReactNode;
   gridHeight?: string;
   gap?: keyof typeof spacingMap;
 }
 
+// Styled component for the Grid container with dynamic columns
 const GridContainer = styled(Box)<{
-  variant: GridProps["variant"];
   gridHeight?: string;
   gap: keyof typeof spacingMap;
+  variant: GridProps["variant"];
 }>`
   display: grid;
   width: 100%;
   height: ${(props) => props.gridHeight || "auto"};
   grid-template-columns: ${(props) =>
-    props.variant === "Equal3"
-      ? "repeat(3, 1fr)"
+    props.variant === "ColumnSL"
+      ? "repeat(6, 1fr)"
       : props.variant === "Equal2"
-        ? "repeat(2, 1fr)"
-        : props.variant === "ColumnSL"
-          ? "1fr 2fr"
-          : props.variant === "WorkDisplay"
-            ? "1fr 2fr"
-            : "1fr"};
-  grid-template-rows: ${(props) =>
-    props.variant === "WorkDisplay" ? "auto" : "1fr"};
-  height: ${(props) => (props.variant === "WorkDisplay" ? "100%" : "auto")};
-  grid-auto-flow: ${(props) =>
-    props.variant === "WorkDisplay" ? "row" : "initial"};
+        ? "repeat(6, 1fr)" // 6 columns, split into 3+3
+        : "repeat(3, 1fr)"}; // 3 equal columns for Default
   grid-gap: ${(props) => spacingMap[props.gap]};
-  overflow-y: ${(props) =>
-    props.variant === "WorkDisplay" ? "auto" : "hidden"};
+  overflow-y: hidden;
 
-  /* Responsive layout for WorkDisplay on smaller screens */
-  @media (max-width: 1265px) {
-    ${(props) =>
-      props.variant === "WorkDisplay" &&
-      `
-          grid-template-columns: 1fr; /* One column layout */
-          grid-template-rows: auto auto; /* Two rows layout */
-          
-          & > :first-child {
-            grid-column: span 2; /* Span across both columns in row 1 */
-            position: sticky;
-            top: 0; /* Adjust as needed for your design */
-            z-index: 10; /* Ensures it stays above other elements if necessary */
-          }
-    
-          & > :nth-child(2),
-          & > :nth-child(3) {
-            grid-column: auto; /* Each takes one column in row 2 */
-          }
-        `}
+  /* Modify the grid column span based on the variant */
+  & > :nth-child(1) {
+    grid-column: ${(props) =>
+      props.variant === "ColumnSL"
+        ? "span 2"
+        : props.variant === "Equal2"
+          ? "span 3"
+          : "auto"}; // 2 columns for ColumnSL, 3 columns for Equal2, 1 for Default
+  }
+
+  & > :nth-child(2) {
+    grid-column: ${(props) =>
+      props.variant === "ColumnSL"
+        ? "span 4"
+        : props.variant === "Equal2"
+          ? "span 3"
+          : "auto"}; // 4 columns for ColumnSL, 3 columns for Equal2, 1 for Default
   }
 `;
 
+// Grid component with variant support
 const Grid: React.FC<React.PropsWithChildren<GridProps>> = ({
-  variant = "Equal3",
+  variant = "Default", // Default variant uses 3 equal columns
   style,
   children,
   gridHeight,
-  gap = "SpacingSpacing0",
+  gap = "SpacingSpacing2",
 }) => {
   return (
     <GridContainer
-      variant={variant}
       style={style}
       gridHeight={gridHeight}
       gap={gap}
+      variant={variant}
     >
-      {children} {/* Each child will now be treated as a separate grid item */}
+      {children}
     </GridContainer>
   );
 };

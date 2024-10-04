@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 14 Sep 2024 20:37:57 GMT
+ * Generated on Thu, 03 Oct 2024 18:52:02 GMT
  */
 
 
@@ -25,37 +25,37 @@ export const SpacingSpacing8 = "5rem";
 export const SpacingSpacing9 = "5.625rem";
 export const SpacingSpacing10 = "6.25rem";
 export const SpacingSpacing20 = "12.25rem";
-export const DisplayHeadingMainFontFamily = "Call Of Ops Duty";
+export const DisplayHeadingMainFontFamily = "October Wish";
 export const DisplayHeadingMainFontWeight = "500";
 export const DisplayHeadingMainLineHeight = "90%";
-export const DisplayHeadingMainFontSize = "18vw";
+export const DisplayHeadingMainFontSize = "25vw";
 export const DisplayHeadingMainLetterSpacing = "0";
 export const DisplayHeadingMainTextDecoration = "none";
 export const DisplayHeadingMainTextCase = "uppercase";
-export const H1HeadingMainFontFamily = "I Am Awake";
+export const H1HeadingMainFontFamily = "October Wish";
 export const H1HeadingMainFontWeight = "500";
 export const H1HeadingMainLineHeight = "125%";
-export const H1HeadingMainFontSize = "8vw";
+export const H1HeadingMainFontSize = "13vw";
 export const H1HeadingMainLetterSpacing = "0";
 export const H1HeadingMainTextDecoration = "none";
 export const H1HeadingMainTextCase = "uppercase";
-export const H2HeadingMainFontFamily = "I Am Awake";
+export const H2HeadingMainFontFamily = "Gendy";
 export const H2HeadingMainFontWeight = "400";
-export const H2HeadingMainLineHeight = "95%";
+export const H2HeadingMainLineHeight = "90%";
 export const H2HeadingMainFontSize = "4vw";
 export const H2HeadingMainLetterSpacing = "0";
 export const H2HeadingMainTextDecoration = "none";
 export const H2HeadingMainTextCase = "uppercase";
-export const H3HeadingMainFontFamily = "I Am Awake";
+export const H3HeadingMainFontFamily = "Gendy";
 export const H3HeadingMainFontWeight = "400";
-export const H3HeadingMainLineHeight = "125%";
+export const H3HeadingMainLineHeight = "90%";
 export const H3HeadingMainFontSize = "3vw";
 export const H3HeadingMainLetterSpacing = "0";
 export const H3HeadingMainTextDecoration = "none";
 export const H3HeadingMainTextCase = "uppercase";
-export const H4HeadingMainFontFamily = "I Am Awake";
+export const H4HeadingMainFontFamily = "Gendy";
 export const H4HeadingMainFontWeight = "400";
-export const H4HeadingMainLineHeight = "170%";
+export const H4HeadingMainLineHeight = "100%";
 export const H4HeadingMainFontSize = "2vw";
 export const H4HeadingMainLetterSpacing = "0";
 export const H4HeadingMainTextDecoration = "none";

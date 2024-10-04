@@ -1,30 +1,27 @@
 import React from "react";
-import Heading from "../../components/base components/TypographyComponents/Heading/Heading";
 import Container from "../../components/base components/Container/Container";
-import Grid from "../../components/base components/LayoutComponents/Grid/Grid";
-import Service from "../../components/about components/Services/Services";
-import ImagesLayout from "../../components/media components/ImagesLayout/ImagesLayout";
+import Flex from "../../components/base components/LayoutComponents/Flex/Flex";
+import TextRevealByWord from "../../components/about components/TextRevealByWord/TextRevealByWord";
 
 const About: React.FC = () => {
   return (
-    <Container height="auto" direction="column">
-      <Grid variant="ColumnSL">
-        <Heading
-          level={"h1"}
-          paddingLeft="SpacingSpacing4"
-          paddingTop="SpacingSpacing2"
-        >
-          About me
-        </Heading>
-
-        <ImagesLayout fullWidthHeight="40vh" paddingTopBottom="SpacingSpacing0">
-          <img
-            src="https://stormtrotters.com/wp-content/uploads/2021/02/16-9-tropicfeel-web-jungle-features-sustainable-01.jpg?w=1024"
-            alt="Full Width Final Animation"
-          />
-        </ImagesLayout>
-      </Grid>
-      <Service />
+    <Container
+      height="100vh"
+      direction="column"
+      backgroundColor="transparent"
+      style={{
+        backgroundImage: `url("person.svg")`,
+        backgroundSize: "80vw 90vh",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "-30vw 10vh",
+      }}
+    >
+      <Flex xAlign="center" yAlign="center">
+        <TextRevealByWord
+          text="A Barcelona-based UI designer and frontend developer, driven by creating meaningful experiences that resonate to people"
+          className="relative z-0 h-[100vh]"
+        />
+      </Flex>
     </Container>
   );
 };

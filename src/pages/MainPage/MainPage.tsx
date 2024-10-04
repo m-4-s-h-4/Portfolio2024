@@ -1,23 +1,27 @@
-import { Element } from "react-scroll";
 import About from "../../sections/About/About";
-import Footer from "../../sections/Footer/Footer";
 import Landing from "../../sections/Landing/Landing";
 import Work from "../../sections/Work/Work";
 import Container from "../../components/base components/Container/Container";
+import SmoothScroll from "../../components/SmoothScroll/SmoothScroll";
 
 function MainPage() {
   return (
-    <>
-      <Container height="auto">
+    <SmoothScroll slideDuration={7}>
+      <Container
+        height="auto"
+        backgroundColor="transparent"
+        style={{
+          backgroundImage: 'url("hand.svg")',
+          backgroundSize: "110vw 130vh",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "20vw 10vh",
+        }}
+      >
         <Landing />
         <About />
-        <Element name="about"></Element>
-        <Element name="work">
-          <Work />
-        </Element>
+        <Work />
       </Container>
-      <Footer />
-    </>
+    </SmoothScroll>
   );
 }
 

@@ -30,6 +30,7 @@ const FlexContainer = styled(Box)<FlexProps>`
   justify-content: ${(props) => props.xAlign || "flex-start"};
   gap: ${(props) => spacingMap[props.gap || "SpacingSpacing0"]};
   width: 100%;
+  height: 100%;
 `;
 
 const Flex: React.FC<React.PropsWithChildren<FlexProps>> = ({

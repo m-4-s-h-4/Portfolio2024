@@ -58,7 +58,7 @@ const Link: React.FC<LinkProps> = ({
       <a href={href} target={target} rel={rel} className={styles.link}>
         {children}
         <span
-          className={styles.underline}
+          className={`${styles.underline} linkUnderline`}
           style={{
             backgroundColor: textColor,
           }}

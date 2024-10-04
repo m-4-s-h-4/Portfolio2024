@@ -13,13 +13,13 @@ import Link from "../TypographyComponents/Link/Link";
 interface ButtonProps {
   text: string;
   onClick?: () => void;
-  link?: string; // New prop for navigation
+  link?: string;
 }
 
 const StyledButton = styled(Box)`
   cursor: pointer;
   background-color: ${BackgroundColorDark};
-  border-radius: 8px;
+  border-radius: 5px;
   padding: ${SpacingSpacing1} ${SpacingSpacing2};
   display: inline-flex;
   align-items: center;
@@ -27,10 +27,19 @@ const StyledButton = styled(Box)`
   text-align: center;
   transition: background-color 0.3s ease;
   width: 100%;
+
+  &:hover {
+    background-color: lighten(${BackgroundColorDark}, 10%);
+
+    .linkUnderline {
+      width: 100%;
+      transition: width 0.3s ease-in-out;
+    }
+  }
 `;
 
 const Button: React.FC<ButtonProps> = ({ text, onClick, link }) => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   const handleClick = () => {
     if (onClick) {

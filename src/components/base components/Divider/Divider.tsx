@@ -1,6 +1,5 @@
 import React from "react";
 import { spacingMap } from "../../../utils/spacingMap";
-import { TextColorDark } from "../../../tokens/js/variables";
 
 export interface DividerProps {
   paddingTopBottom?: keyof typeof spacingMap;
@@ -19,7 +18,7 @@ const Divider: React.FC<DividerProps> = ({
   return (
     <hr
       style={{
-        border: `0.5px solid ${TextColorDark}`,
+        border: `0.5px solid rgba(0, 0, 0, 0.1)`,
         marginTop: paddingTopBottomValue,
         marginBottom: paddingTopBottomValue,
         marginLeft: paddingLeftRightValue,

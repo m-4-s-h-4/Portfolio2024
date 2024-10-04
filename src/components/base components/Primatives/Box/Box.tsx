@@ -42,16 +42,16 @@ const Box = styled.div<BoxProps>`
 
   ${(props) =>
     props.borderLeft &&
-    `border-left: 1px solid ${props.borderColor || "rgba(0, 0, 0, 0.1)"};`};
+    `border-left: 1px solid ${props.borderColor || "rgba(53, 50, 50, 0.3)"};`};
   ${(props) =>
     props.borderRight &&
-    `border-right: 1px solid ${props.borderColor || "rgba(0, 0, 0, 0.1)"};`};
+    `border-right: 1px solid ${props.borderColor || "rgba(53, 50, 50, 0.3)"};`};
   ${(props) =>
     props.borderTop &&
-    `border-top: 1px solid ${props.borderColor || "rgba(0, 0, 0, 0.1)"};`};
+    `border-top: 1px solid ${props.borderColor || "rgba(53, 50, 50, 0.3)"};`};
   ${(props) =>
     props.borderBottom &&
-    `border-bottom: 1px solid ${props.borderColor || "rgba(0, 0, 0, 0.1)"};`};
+    `border-bottom: 1px solid ${props.borderColor || "rgba(53, 50, 50, 0.3)"};`};
 
   ${(props) =>
     props.displayFlex &&

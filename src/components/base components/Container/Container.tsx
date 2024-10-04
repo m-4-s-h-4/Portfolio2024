@@ -1,5 +1,3 @@
-// Container.tsx
-
 import React from "react";
 import styled from "styled-components";
 import Box from "../Primatives/Box/Box";
@@ -10,14 +8,14 @@ import {
 import { spacingMap } from "../../../utils/spacingMap";
 
 export interface ContainerProps {
-  backgroundColor?: "dark" | "light";
-  height?: "auto" | "100vh" | "50vh" | "25vh";
+  backgroundColor?: "dark" | "light" | "transparent"; // Added "transparent" option
+  height?: "auto" | "100vh" | "50vh" | "200vh";
   paddingTopBottom?: keyof typeof spacingMap;
   paddingLeftRight?: keyof typeof spacingMap;
   direction?: "row" | "column";
-  enableResponsivePadding?: boolean; // New prop to enable/disable responsive padding
+  enableResponsivePadding?: boolean; // Prop to enable/disable responsive padding
   children: React.ReactNode;
-  style?: React.CSSProperties; // **Added style prop**
+  style?: React.CSSProperties;
 }
 
 const StyledContainer = styled(Box)<{
@@ -26,7 +24,7 @@ const StyledContainer = styled(Box)<{
   paddingTopBottom: string;
   paddingLeftRight: string;
   flexDirection: string;
-  enableResponsivePadding: boolean; // Pass prop to control media queries
+  enableResponsivePadding: boolean;
 }>`
   height: ${(props) => props.containerHeight};
   width: 100%;
@@ -60,12 +58,18 @@ const Container: React.FC<ContainerProps> = ({
   paddingTopBottom = "SpacingSpacing0",
   paddingLeftRight = "SpacingSpacing0",
   direction = "column",
-  enableResponsivePadding = false, // Default to false (no responsive padding)
+  enableResponsivePadding = false,
   children,
-  style, // Destructure the style prop
+  style,
 }) => {
+  // Determine the background color based on the prop value
   const bgColor =
-    backgroundColor === "dark" ? BackgroundColorDark : BackgroundColorLight;
+    backgroundColor === "dark"
+      ? BackgroundColorDark
+      : backgroundColor === "light"
+        ? BackgroundColorLight
+        : "transparent"; // If backgroundColor is "transparent", set bgColor to "transparent"
+
   const paddingTopBottomValue = spacingMap[paddingTopBottom];
   const paddingLeftRightValue = spacingMap[paddingLeftRight];
 
@@ -76,8 +80,8 @@ const Container: React.FC<ContainerProps> = ({
       paddingTopBottom={paddingTopBottomValue}
       paddingLeftRight={paddingLeftRightValue}
       flexDirection={direction}
-      enableResponsivePadding={enableResponsivePadding} // Pass prop to enable/disable responsive padding
-      style={style} // **Forward the style prop**
+      enableResponsivePadding={enableResponsivePadding}
+      style={style}
     >
       {children}
     </StyledContainer>

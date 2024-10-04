@@ -11,6 +11,7 @@ export interface ParagraphProps {
   color?: "dark" | "light";
   paddingTop?: keyof typeof spacingMap;
   paddingBottom?: keyof typeof spacingMap;
+  paddingLeftRight?: keyof typeof spacingMap; // New paddingLeftRight prop
   textTransform?: TextTransform;
   style?: React.CSSProperties;
   children: React.ReactNode;
@@ -26,6 +27,7 @@ const Paragraph: React.FC<ParagraphProps> = ({
   color = "dark",
   paddingTop = "SpacingSpacing0",
   paddingBottom = "SpacingSpacing0",
+  paddingLeftRight = "SpacingSpacing0", // Default for paddingLeftRight
   textTransform = "none",
   style,
   children,
@@ -34,6 +36,7 @@ const Paragraph: React.FC<ParagraphProps> = ({
   const textAlign = align === "center" ? "center" : "left";
   const paddingTopValue = spacingMap[paddingTop];
   const paddingBottomValue = spacingMap[paddingBottom];
+  const paddingLeftRightValue = spacingMap[paddingLeftRight]; // Use for both left and right
 
   return (
     <Text
@@ -43,6 +46,8 @@ const Paragraph: React.FC<ParagraphProps> = ({
         textAlign,
         paddingTop: paddingTopValue,
         paddingBottom: paddingBottomValue,
+        paddingLeft: paddingLeftRightValue, // Apply to left
+        paddingRight: paddingLeftRightValue, // Apply to right
         textTransform,
         ...style,
       }}

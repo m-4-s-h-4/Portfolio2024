@@ -4,6 +4,7 @@ import { client } from "../lib/client";
 export type Work = {
   id: string;
   title: string;
+  description: string;
   thumbnail: {
     url: string;
   };
@@ -22,6 +23,7 @@ const WorksQuery = gql`
     works {
       id
       title
+      description
       thumbnail {
         url
       }
